@@ -42,7 +42,7 @@ sh train_edsrbaseline_org.sh
 
 # Step-2
 # Train 8-bit PAMS models
-sh train_edsrbaseline_org.sh
+sh train_edsrbaseline_pams.sh
 
 # Step-3
 # Train CADyQ models
@@ -63,7 +63,7 @@ test_edsrbaseline_cabm_simple.sh
 ```
 
 ### How to sampling patches while training
-You may refer to [SamplingAUG](https://github.com/littlepure2333/SamplingAug)
+You may refer to [SamplingAUG](https://github.com/littlepure2333/SamplingAug).
 
 
 ### Citation
