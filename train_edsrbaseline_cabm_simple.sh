@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=0 python3 main_inference.py \
---data_test Set5 --dir_data /root/data01/tsm/datasets --n_GPUs 1 \
+--data_test Set5 --dir_data <your_datasets_path> --n_GPUs 1 \
 --scale 4 --k_bits 8 --model EDSR \
 --search_space 4+6+8 --save edsrbaseline_cabm_simple_x4 \
 --n_feats 64 --n_resblocks 16 --res_scale 1 \
