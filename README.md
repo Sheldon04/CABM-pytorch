@@ -1,4 +1,4 @@
-# CABM: Content-Aware Bit Mapping for Single Image Super-Resolution Network with Large Input
+# CABM: Content-Aware Bit Mapping for Single Image Super-Resolution Network with Large Input (CVPR 2023)
 
 This respository is the official implementation of our CVPR2023 paper.
 [paper](https://arxiv.org/abs/2304.06454).
