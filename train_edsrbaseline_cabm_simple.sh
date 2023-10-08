@@ -7,5 +7,5 @@ CUDA_VISIBLE_DEVICES=0 python3 main_inference.py \
 --epochs 300  --decay 150 --lr 1e-5 \
 --loss_kd --loss_kdf --w_bit_decay 1e-6 --select_bit 0 --select_float 2 \
 --teacher_weights <pams_model_path> \
---student_weights <pams_model_path> \
+--student_weights <CADyQ_model_path> \
 #
