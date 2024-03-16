@@ -1,6 +1,6 @@
 # CABM: Content-Aware Bit Mapping for Single Image Super-Resolution Network with Large Input (CVPR 2023)
 
-This respository is the official implementation of our CVPR2023 paper.
+This repository is the official implementation of our CVPR2023 paper.
 [paper](https://arxiv.org/abs/2304.06454).
 
 
@@ -62,7 +62,7 @@ sh train_edsrbaseline_cabm_simple.sh
 test_edsrbaseline_cabm_simple.sh
 ```
 
-### How to sampling patches while training
+### How to sample patches while training
 You may refer to [SamplingAUG](https://github.com/littlepure2333/SamplingAug).
 
 
