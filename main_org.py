@@ -32,7 +32,7 @@ device = torch.device('cpu' if args.cpu else f'cuda:{args.gpu_id}')
 
 
 class Trainer():
-    def __init__(self, args, loader, t_model, s_model, ckp, config_dict):
+    def __init__(self, args, loader, t_model, s_model, ckp):
         self.args = args
         self.scale = args.scale
 
@@ -43,7 +43,6 @@ class Trainer():
         self.t_model = t_model
         self.s_model = s_model
 
-        self.config_dict = config_dict
 
         if args.model == 'EDSR' or args.model == 'SRResNet':
             arch_param = [v for k, v in self.t_model.named_parameters(
@@ -628,11 +627,7 @@ def main():
                 t_checkpoint = ckpt['state_dict'] if 'state_dict' in ckpt else ckpt
                 t_model.load_state_dict(t_checkpoint)
 
-        config_dict = {}
-        with open(f"{args.model}-[4]-['div2k_valid'].json", "r") as f:
-            config_dict = json.load(f) 
-            f.close()
-        t = Trainer(args, loader, t_model, t_model, checkpoint, config_dict)
+        t = Trainer(args, loader, t_model, t_model, checkpoint)
 
         print(f'{args.save} start!')
         while not t.terminate():
