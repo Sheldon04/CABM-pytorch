@@ -372,9 +372,9 @@ class Trainer():
                             sr_list, num_h, num_w, h, w, self.test_patch_size, self.step_size)
                         sr = sr.unsqueeze(0)
                         save_list = [sr]
-                        if self.args.add_mask:
-                            sr_mask = util.add_mask_psnr(sr.cpu(), scale, num_h, num_w, h*scale, w*scale, self.test_patch_size, self.step_size, psnrs)
-                            save_list.append(sr_mask)
+                        # if self.args.add_mask:
+                        #     sr_mask = util.add_mask_psnr(sr.cpu(), scale, num_h, num_w, h*scale, w*scale, self.test_patch_size, self.step_size, psnrs)
+                        #     save_list.append(sr_mask)
                         cur_psnr = utility.calc_psnr(
                             sr, hr, scale, self.args.rgb_range, dataset=d)
                         cur_ssim = utility.calc_ssim(
